@@ -1,0 +1,45 @@
+<div class="container-fluid card m-3 bg-secondary p-5">
+    <!-- if variable is true then show col-12 class or col-8 after click on buttuns -->
+    <div class="bg-info">
+        <div class="btn btn-success" (click)="OnAdd()">add</div>
+        <div class="btn btn-success" (click)="OnClose()">close</div>
+    </div>
+    <div class="container mt-4">
+        <div class="row g-0">
+            <div class=" bg-info " [ngClass]="isSidePanel? 'col-12':'col-7 me-3'">sdf</div>
+            <div *ngIf="!isSidePanel" class="col-4 g-0 bg-success">fdg</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid card m-3 bg-primary">
+    <!-- if function value is tue then show col-12 class || clo-7 -->
+    <div class="bg-info">
+        <div class="btn btn-success" (click)="OnAdd()">add</div>
+        <div class="btn btn-success" (click)="OnClose()">close</div>
+    </div>
+    <div class="container mt-4">
+        <div class="row g-0">
+            <div class=" bg-info " [ngClass]="isSide()? 'col-12':'col-7 me-3'">sdf</div>
+            <div *ngIf="!isSidePanel" class="col-4 g-0 bg-success">fdg</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid m-3 ">
+    <!-- nultiple class with multiple condition -->
+    <div class="bg-info">
+        <!-- <div class="btn btn-success" (click)="OnAdd()">add</div>
+        <div class="btn btn-success" (click)="OnClose()">close</div> -->
+        <div class="btn btn-success" (click)="role='admin'">admin</div>
+        <div class="btn btn-success" (click)="role='user'">user</div>
+    </div>
+    <div class="container mt-4">
+        <div class="row g-0">
+            <div class="" [ngClass]="{ 'col-12':isSidePanel,'clo-7':!isSidePanel,'bg-danger':(role==='admin'),'bg-success':(role==='user')}">sdf</div>
+            <div *ngIf="!isSidePanel" class="col-4 g-0 bg-success">fdg</div>
+        </div>
+    </div>
+</div>
