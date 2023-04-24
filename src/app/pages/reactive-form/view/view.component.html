@@ -1,0 +1,20 @@
+<div class="d-flex just justify-content-end">
+    <button class="btn btn-success" [routerLink]="['/reactive-form/add']">add products</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>delete</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productsArr ; let i=index">
+            <td>{{product.name}}</td>
+            <td ><button class="btn btn-danger" (click)="deleteProduct(product.id)">delete</button></td>
+           
+        </tr>
+      
+    </tbody>
+</table>
