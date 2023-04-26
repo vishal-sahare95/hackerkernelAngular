@@ -1,1 +1,8 @@
-<p>child works!</p>
+<div class="card mt-5">
+    <p>child works!</p>
+    <ul *ngFor="let item of data ; let i=index" class="d-flex justify-content-between">
+        <li>{{item.name}}</li>
+
+        <li><button class="btn btn-danger" (click)="delete(i)">delete</button></li>
+    </ul>
+</div>

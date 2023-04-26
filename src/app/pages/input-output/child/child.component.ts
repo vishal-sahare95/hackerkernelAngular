@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Foods } from 'src/app/config/foods/foods';
 
 @Component({
   selector: 'app-child',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
+@Input() data:Foods[]=[]
 
+delete(id:number){
+this.data.splice(id,1)
+}
 }
