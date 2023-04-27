@@ -8,3 +8,8 @@ export class FoodsC implements Foods{
 this.name=obj && obj.name || ''
     }
 }
+enum Direction {
+    new = 1,
+    open,
+    close,
+  }

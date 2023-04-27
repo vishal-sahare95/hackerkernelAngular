@@ -8,6 +8,10 @@ import{ HttpClientModule, HTTP_INTERCEPTORS }from '@angular/common/http';
 import { LoginComponent } from './partials/login/login.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { MenubarComponent } from './partials/menubar/menubar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +23,10 @@ import { MenubarComponent } from './partials/menubar/menubar.component';
     AppRoutingModule,
     Day1normalModule,
     HttpClientModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    TooltipModule.forRoot(),
+    TabsModule.forRoot()
   ],
   exports:[
     MenubarComponent

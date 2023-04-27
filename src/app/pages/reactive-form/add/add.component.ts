@@ -30,6 +30,14 @@ export class AddComponent {
   pname(i:number){
     return this.form.controls[i].get('pname')
   }
+  addProducts() {
+    const productsForm = this.fb.group({
+      pname: ['', Validators.required],
+      price: [' ', Validators.required],
+      quantity: [' ', Validators.required]
+    }); 
+     this.products.push(productsForm);
+  }
   save(){
   if(this.form.valid){
 
@@ -45,14 +53,7 @@ export class AddComponent {
     }
 
   }
-  addProducts() {
-    const productsForm = this.fb.group({
-      pname: ['', Validators.required],
-      price: [' ', Validators.required],
-      quantity: [' ', Validators.required]
-    }); 
-     this.products.push(productsForm);
-  }
+
 
    
 

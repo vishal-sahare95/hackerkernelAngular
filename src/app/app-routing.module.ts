@@ -31,12 +31,23 @@ const routes: Routes = [
     path:'dashboard',
     loadChildren:()=>import('./pages/dashboard/dashboard.module').then(m=>m.DashboardModule),
     canActivate:[AuthGuard]
+    
   },
+// second part 
 
-
+{
+  path:'second-path',
+  loadChildren:()=>import('./pages/secondPart/first-dat/first-dat.module').then(m=>m.FirstDatModule)
+},
+{
+  path:'second-part-dashboard',
+  loadChildren:()=>import('./pages/secondPart/dashboard/dashboard.module').then(m=>m.DashboardModule),
+  canActivate:[AuthGuard]
+  
+},
 
 ];
-// loadChildren:()=>import('./page/counting/counting.module').then(m=>m.CountingModule)
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

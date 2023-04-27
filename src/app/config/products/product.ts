@@ -4,6 +4,7 @@ export interface Product {
     products: products[]
 }
 export class ProcductC implements Product {
+    id?:number| undefined
     name: string;
     products: products[]
     constructor(obj?: Product) {

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product, productsC } from './product';
+import { ProcductC, Product, productsC } from './product';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,9 @@ url="http://localhost:3000/products"
 
   getAppProducts():Observable<Product[]>{
     return this.http.get<Product[]>(this.url)
+  }
+  getProductsById(id:number):Observable<ProcductC>{
+    return this.http.get<ProcductC>(this.url+"/"+id)
   }
   
   postProduct(data:productsC):Observable<productsC>{
