@@ -1,38 +1,25 @@
-import {   AfterViewChecked, Component,   } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, } from '@angular/core';
 import { LoginService } from './config/login/login.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewChecked{
-  title = 'angular15';
-  isvisible?:boolean
-  constructor(private loginSRV:LoginService){
-    
-this.menu()
-  }
-
-
-
-ngAfterViewChecked(): void {
-  this.menu()
-}
-
-  menu(){
-
-   
-    if(localStorage.getItem('token')==''){
-      this.isvisible=false
-      console.log(`'k' ${this.isvisible}`);
-      
+export class AppComponent implements OnInit {
+    title = 'angular15';
+    logInValue?: boolean;
+    constructor(private loginSRV: LoginService) {
         
-  }else{
-    this.isvisible=true
-    console.log(`true ${this.isvisible}`);
-  }
-  }
-  
+        this.loginSRV.islogInValue.subscribe(suc => {
+        })
+    }
+    ngOnInit(): void {
+        this.loginSRV.islogInValue.subscribe(suc => {
+            this.logInValue = suc
+        })
+    }
+
+
 
 }

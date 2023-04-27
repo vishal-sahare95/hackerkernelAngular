@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './config/auth.guard';
 import { LoginComponent } from './partials/login/login.component';
+import { LoggedInAuthGuardGuard } from './config/logged-in-auth-guard.guard';
 
 const routes: Routes = [ 
  
   {
     path:'login',
    component:LoginComponent,
+   canActivate:[LoggedInAuthGuardGuard]
   },
   {
     path:'pages',
