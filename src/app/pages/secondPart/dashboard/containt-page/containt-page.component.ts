@@ -7,24 +7,24 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
   templateUrl: './containt-page.component.html',
   styleUrls: ['./containt-page.component.scss']
 })
-export class ContaintPageComponent implements OnInit ,AfterViewInit{
+export class ContaintPageComponent implements OnInit, AfterViewInit {
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
-  tabnumber?:number
-constructor(private activated:ActivatedRoute){}
+  public tabnumber?: number
+  constructor(private activated: ActivatedRoute) { }
   ngOnInit(): void {
-    
+
   }
   ngAfterViewInit(): void {
-    Promise.resolve().then(()=>{
-      this.activated.fragment.subscribe((suc:number|string|null)=>{
-     
-        this.tabnumber=Number(suc)
-        
+    Promise.resolve().then(() => {
+      this.activated.fragment.subscribe((suc: number | string | null) => {
+
+        this.tabnumber = Number(suc)
+
         this.selectTab(this.tabnumber)
-        
+
       })
     })
-    
+
   }
   selectTab(tabId: number) {
     if (this.staticTabs?.tabs[tabId]) {

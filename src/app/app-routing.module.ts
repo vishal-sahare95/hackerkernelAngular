@@ -45,6 +45,12 @@ const routes: Routes = [
   canActivate:[AuthGuard]
   
 },
+{
+  path:'second-path-second-day',
+  loadChildren:()=>import('./pages/secondPart/secondDay/second-assignment/second-assignment.module').then(m=>m.SecondAssignmentModule),
+  canActivate:[AuthGuard]
+  
+},
 
 ];
 

@@ -11,8 +11,7 @@ export class AppComponent implements OnInit {
     logInValue?: boolean;
     constructor(private loginSRV: LoginService) {
         
-        this.loginSRV.islogInValue.subscribe(suc => {
-        })
+        
     }
     ngOnInit(): void {
         this.loginSRV.islogInValue.subscribe(suc => {

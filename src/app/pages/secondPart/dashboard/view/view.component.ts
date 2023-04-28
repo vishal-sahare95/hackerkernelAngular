@@ -7,6 +7,7 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
   styleUrls: ['./view.component.scss']
 })
 export class ViewComponent {
+  
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
 
   selectTab(tabId: number) {
