@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SecondAsingmentService } from 'src/app/config/secondPart/second-asingment.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { SecondAsingmentService } from 'src/app/config/secondPart/second-asingme
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
   data:string='nemu';
   newdata?:number
 constructor(private secondPastSeconASS:SecondAsingmentService){

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { SecondAsingmentService } from 'src/app/config/secondPart/second-asingment.service';
 
 @Component({
@@ -6,15 +6,13 @@ import { SecondAsingmentService } from 'src/app/config/secondPart/second-asingme
   templateUrl: './third.component.html',
   styleUrls: ['./third.component.scss']
 })
-export class ThirdComponent {
+export class ThirdComponent implements AfterViewInit{
   data:string='third 3';
   newdata:number=3
 constructor(private secondPastSeconASS:SecondAsingmentService){
   
  }
- ngOnInit(): void {
-    
-}
+
 ngAfterViewInit(): void {
   
   this.secondPastSeconASS.navmenu.next(3)
