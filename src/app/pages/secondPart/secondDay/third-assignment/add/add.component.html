@@ -1,0 +1,24 @@
+
+<form [formGroup]="form">
+  <div class="" formArrayName="students">
+    <div class="" *ngFor="let student of students().controls ; let i=index" >
+      <div class="" [formGroupName]="i">
+        <input type="text" class="form-group" name="" id="" formArrayName="sname">
+      </div>
+      <div formArrayName="courses">
+        <div class=" " *ngFor=" let couse of studentCourses(i).controls; let j=index">
+            <div class="" [formArrayName]="j">
+              <input type="text " formControlName="course">
+              <input type="text " formControlName="time">
+
+            </div>
+           
+        </div>
+        <button type="button" (click)="addStudentCourses(i)">
+              Add course
+            </button>
+          </div>
+        </div>
+        <button type="button" (click)="addstudennt()">Add student</button>
+      </div>
+    </form>
