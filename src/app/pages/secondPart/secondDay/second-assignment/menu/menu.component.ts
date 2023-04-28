@@ -7,16 +7,18 @@ import { SecondAsingmentService } from 'src/app/config/secondPart/second-asingme
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-//   newdata:number=1
-//   constructor(private secondPastSeconASS:SecondAsingmentService){
-    
-//    }
-//    ngOnInit(): void {
-//        this.secondPastSeconASS.navmenu.subscribe(suc=>{
-//           console.log(typeof(suc));
-//           console.log(typeof(this.newdata));
-//           this.newdata=suc
-          
-//        })
-// }
+  data:string='nemu';
+  newdata?:number
+constructor(private secondPastSeconASS:SecondAsingmentService){
+
+
+}
+ngOnInit(): void {
+  this.secondPastSeconASS.navmenu.subscribe(suc=>{  
+    this.newdata =suc
+     console.log(this.newdata);
+     
+  })
+}
+
 }

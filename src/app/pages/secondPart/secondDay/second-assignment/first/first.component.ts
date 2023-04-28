@@ -6,7 +6,7 @@ import { SecondAsingmentService } from 'src/app/config/secondPart/second-asingme
   templateUrl: './first.component.html',
   styleUrls: ['./first.component.scss']
 })
-export class FirstComponent implements OnInit ,AfterViewInit{
+export class FirstComponent implements OnInit {
     data:string='first1';
      newdata?:number=0
 constructor(private secondPastSeconASS:SecondAsingmentService){
@@ -21,10 +21,7 @@ constructor(private secondPastSeconASS:SecondAsingmentService){
         
      })
  }
-ngAfterViewInit(): void {
-  
 
-}
 
 
 }

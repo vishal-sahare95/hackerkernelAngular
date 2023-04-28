@@ -21,7 +21,7 @@ export class FourthComponent implements OnInit {
     //    }) 
   }
   ngAfterViewInit(): void {
-    this.secondPastSeconASS.navmenu.next(2)
+    this.secondPastSeconASS.navmenu.next(4)
     this.secondPastSeconASS.navmenu.subscribe(suc=>{  
       this.newdata =suc
        console.log(this.newdata);

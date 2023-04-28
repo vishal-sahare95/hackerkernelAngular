@@ -1,31 +1,35 @@
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" *ngIf="newdata!=4">
     <div class="container-fluid">
-      
-      
+
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" [routerLink]="'/second-path-second-day/first'" >first</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" [routerLink]="'/second-path-second-day/second'" >second</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active"  [routerLink]="'/second-path-second-day/third'" >third</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active"  [routerLink]="'/second-path-second-day/fourth'" >fourth</a>
-          </li>
-         
-   
-         
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="'/second-path-second-day/first'">first</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="'/second-path-second-day/second'">second</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="'/second-path-second-day/third'">third</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink]="'/second-path-second-day/fourth'">fourth</a>
+            </li>
         </ul>
-        <!-- <button class="btn btn-info" *ngIf="newdata==1">login1</button> -->
-  <!-- <button class="btn btn-danger" (click)="logOut()">Log Out</button> -->
-     
+        <div class="">
+            <button class="btn btn-info" *ngIf="newdata==undefined || newdata==0">login</button>
+            <h1 *ngIf="newdata==2">welcome</h1>
+            <h1 *ngIf="newdata==3">contact 99989897979</h1> {{newdata}}
+        </div>
+        
+       
+
     </div>
-  </nav>
+</nav>
 
-
-    
-
+<div class="card bg-info" *ngIf="newdata==4">
+    <div class=" d-flex justify-content-between">
+        <a class="text-white" [routerLink]="'/second-path-second-day/first'">go to home</a>
+        <h1>welcome</h1>
+    </div>
+</div>
