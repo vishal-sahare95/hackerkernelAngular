@@ -1,0 +1,32 @@
+
+
+<div class="d-flex justify-content-center ">
+    <div class="card col-8">
+<form [formGroup]="form">
+    
+        <div class="card-header text-center">
+            <h4>Add Product</h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group mt-3">
+              <label class="p-2 ps-0" for="name"> Product name</label>
+              <input type="text"  id="" class="form-control " placeholder="" formControlName="name" >
+            </div>
+            <div class="form-group mt-3">
+              <label class="p-2 ps-0" for="price"> price</label>
+              <input type="text"  id="price" class="form-control " placeholder="" formControlName="price" >
+            </div>
+            <div class="form-group mt-3">
+              <label class="p-2 ps-0" for="quantity">quantity</label>
+              <input type="text"  id="quantity" class="form-control " placeholder="" formControlName="quantity" >
+            </div>
+
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-end">
+           <button class="btn btn-success" (click)="saveData()">save</button>
+        </div>
+   
+   
+</form>
+     </div>
+</div>

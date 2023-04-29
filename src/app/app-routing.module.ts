@@ -57,6 +57,12 @@ const routes: Routes = [
   canActivate:[AuthGuard]
   
 },
+{
+  path:'second-path-second-fouth-task',
+  loadChildren:()=>import('./pages/secondPart/thirdDay/third-json/third-json.module').then(m=>m.ThirdJsonModule),
+  canActivate:[AuthGuard]
+  
+},
 
 ];
 

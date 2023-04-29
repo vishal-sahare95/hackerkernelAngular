@@ -55,8 +55,6 @@ export class AddComponent {
   }
 
 
-   
-
     deleteProduct(producuIdx: number) {
       this.products.removeAt(producuIdx);
   }

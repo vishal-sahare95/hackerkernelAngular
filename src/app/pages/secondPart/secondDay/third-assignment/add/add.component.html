@@ -1,24 +1,58 @@
-
-<form [formGroup]="form">
-  <div class="" formArrayName="students">
-    <div class="" *ngFor="let student of students().controls ; let i=index" >
-      <div class="" [formGroupName]="i">
-        <input type="text" class="form-group" name="" id="" formArrayName="sname">
-      </div>
-      <div formArrayName="courses">
-        <div class=" " *ngFor=" let couse of studentCourses(i).controls; let j=index">
-            <div class="" [formArrayName]="j">
-              <input type="text " formControlName="course">
-              <input type="text " formControlName="time">
-
-            </div>
-           
-        </div>
-        <button type="button" (click)="addStudentCourses(i)">
-              Add course
-            </button>
+<div class="d-flex justify-content-center mt-5">
+  <form [formGroup]="form" class=" card col-8 p-3 pt-0">
+    <div class="" formArrayName="students">
+      <div class="" *ngFor="let student of students().controls ; let i=index">
+       <div class="card p-5  mt-3" [ngClass]="students().controls.length==1 ? 'pt-4':'pt-0'">
+        <div class="d-flex justify-content-end m-3" (click)="removeEmployee(i)" *ngIf="students().controls.length!=1">cancle</div>
+        <div class="" [formGroupName]="i">
+          <div class="d-flex">
+            <select name="" id="" class="form-control ms-2" formControlName="sname">
+              <option selected value="">select name</option>
+              <option value="1">vishal</option>
+              <option value="2">shubham</option>
+              <option value="3">pratik</option>
+              <option value="4">pranay</option>
+              <option value="5">rahul</option>
+            </select>
           </div>
+          <div formArrayName="courses" class="card mt-3 p-3 ">
+            <h6> course list</h6>
+            <div class=" " *ngFor=" let couse of studentCourses(i).controls; let j=index">
+              <div class="" [formGroupName]="j">
+                <div class="form-group d-flex mt-2">
+                  <select name="" id="" class="form-control ms-2" formControlName="course">
+                    <option selected value="">select course</option>
+                    <option value="c">c</option>
+                    <option value="c++">c++</option>
+                    <option value="js">js</option>
+                    <option value="ts">ts</option>
+                    <option value="java">java</option>
+                  </select>
+                  <select name="" id="" class="form-control ms-2" formControlName="time">
+                    <option selected value="">select time</option>
+                    <option value="1">1 hr</option>
+                    <option value="2">2 hr</option>
+                    <option value="3">3 hr</option>
+                    <option value="4">4 hr</option>
+                    <option value="5">5 hr</option>
+                  </select>
+                  <button class="btn btn-danger ms-1" (click)="removeCourses(i,j)">remove</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-success mt-3" (click)="addStudentCourses(i)">
+            Add
+          </button>
         </div>
-        <button type="button" (click)="addstudennt()">Add student</button>
+       </div>   
       </div>
-    </form>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-success mb-3 " (click)="addstudent()">Add student</button>
+      </div>
+    </div>
+    <div type="button"  class="btn btn-success d-block" (click)="onSubmit()">save</div>
+  </form>
+</div>
+
+

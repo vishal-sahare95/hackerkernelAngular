@@ -157,5 +157,19 @@
       "name": "dsfds",
       "id": 2
     }
+  ],
+  "product": [
+    {
+      "name": "dsz",
+      "price": "4",
+      "quantity": "4",
+      "id": 28
+    },
+    {
+      "name": "dsf",
+      "price": "34",
+      "quantity": "43",
+      "id": 29
+    }
   ]
 }

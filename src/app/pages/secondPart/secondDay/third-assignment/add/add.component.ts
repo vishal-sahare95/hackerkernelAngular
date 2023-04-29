@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,45 +6,72 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.scss']
 })
-export class AddComponent {
- form:FormGroup
- constructor(private fb:FormBuilder){
-this.form=this.fb.group({
-  students:this.fb.array([])
-})
- }
- students(){
-  return this.form.get('students') as FormArray
- }
- newStudent(){
-  return this.fb.group({
-    sname:[''],
-    courses:this.fb.array([])
-  })
- }
+export class AddComponent implements OnInit {
+  public studentArr: any[] = []
+  form: FormGroup
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      students: this.fb.array([])
+    })
+  }
 
- addstudennt(){
-  this.students().push(this.newStudent())
- }
+  ngOnInit(): void {
+    this.addstudent();
+    this.addStudentCourses(0)
+  }
 
+  students(): FormArray {
+    return this.form.get('students') as FormArray
+  }
 
- studentCourses(studentINX:number){
-  return this.students().at(studentINX).get('couses') as FormArray
+  newStudent(): FormGroup {
+    return this.fb.group({
+      sname: [''],
+      courses: this.fb.array([])
+    })
+  }
 
- }
+  addstudent() {
+    this.students().push(this.newStudent())
+  }
 
- newCourse(){
-  return this.fb.group({
-    course:[''],
-    time:['']
-  })
- }
- addStudentCourses(studentINX:number){
-  debugger
-  this.studentCourses(studentINX).push(this.newCourse())
+  removeEmployee(i: number) {
+    this.students().removeAt(i);
+  }
 
- }
- onSubmit() {
-  console.log(this.form.value);
+  studentCourses(studentINX: number): FormArray {
+    return this.students().at(studentINX).get('courses') as FormArray
+  }
+
+  newCourse(): FormGroup {
+    return this.fb.group({
+      course: [''],
+      time: ['']
+    })
+  }
+  addStudentCourses(studentINX: number) {
+    this.studentCourses(studentINX).push(this.newCourse())
+  }
+
+  removeCourses(studentINX: number, couseINX: number) {
+    this.studentCourses(studentINX).removeAt(couseINX);
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      const sdata = localStorage.getItem('studentdata');
+      if (sdata == null) {
+        const newstudARR = []
+        newstudARR.push(this.form.value)
+        localStorage.setItem('studentdata', JSON.stringify(newstudARR))
+      }
+      else {
+        const oldData = JSON.parse(sdata)
+        oldData.push(this.form.value)
+        localStorage.setItem('studentdata', JSON.stringify(oldData))
+        this.form.reset()
+      }
+    }
+  }
 }
-}
+
