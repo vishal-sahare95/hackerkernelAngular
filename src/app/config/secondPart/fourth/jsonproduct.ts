@@ -1,11 +1,11 @@
 export interface Jsonproduct {
-    id:number|undefined,
+    id?:number|undefined,
     name:string,
     price:number,
     quantity:number,
 }
  export class JsonproductC implements Jsonproduct{
-    id:number|undefined;
+    id?:number|undefined;
     name:string;
     price:number;
     quantity:number;

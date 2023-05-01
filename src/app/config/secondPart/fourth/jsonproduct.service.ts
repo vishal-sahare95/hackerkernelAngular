@@ -14,12 +14,12 @@ url=' http://localhost:3000/product/'
   }
   getDataById(id:number):Observable<JsonproductC>{
    return this.http.get<JsonproductC>(this.url+id)
-  
+
   }
   postdata(data:JsonproductC):Observable<JsonproductC>{
    return this.http.post<JsonproductC>(this.url,data)
   }
-  putData(data:JsonproductC,id:number):Observable<JsonproductC>{
+  putData(id:number,data:JsonproductC):Observable<JsonproductC>{
    return this.http.put<JsonproductC>(this.url+id,data)
   }
   deleteData(id:number):Observable<JsonproductC>{

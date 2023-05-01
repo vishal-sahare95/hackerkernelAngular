@@ -20,21 +20,21 @@ export class AddComponent {
     }
 
     saveData(){
-     
+
         if(this.form.valid){
-         
-          console.log(this.form.value); 
+
+          console.log(this.form.value);
           this.JsonProductSRV.postdata(this.form.value).subscribe(suc=>{
             console.log(suc);
-            this.isSucMsg=true 
+            this.isSucMsg=true
             this.router.navigateByUrl('second-path-second-fouth-task/list')
           })
         }else{
             alert('sorr')
         }
-        
-        
-        
+
+
+
     }
 
 
