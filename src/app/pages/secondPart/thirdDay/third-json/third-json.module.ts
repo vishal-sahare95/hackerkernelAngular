@@ -7,12 +7,14 @@ import { ListComponent } from './list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { SearchPipe } from 'src/app/config/search.pipe';
 
 @NgModule({
   declarations: [
     AddComponent,
     ListComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,

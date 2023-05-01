@@ -32,7 +32,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     MenubarComponent
   ],
   providers: [
-    
+
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { Router } from '@angular/router';
-import { Jsonproduct } from 'src/app/config/secondPart/fourth/jsonproduct';
+import { Component, OnInit } from '@angular/core';
 import { JsonproductService } from 'src/app/config/secondPart/fourth/jsonproduct.service';
 
 @Component({
@@ -8,31 +6,28 @@ import { JsonproductService } from 'src/app/config/secondPart/fourth/jsonproduct
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit,OnChanges {
+export class ListComponent implements OnInit {
 productARR:any[]=[];
-seachData:string=''
+seachData:any=""
 
-constructor(private jsonProduct:JsonproductService,private router:Router){}
-ngOnInit(): void {
-  console.log(this.getAllProduct());
+constructor(private jsonProduct:JsonproductService){}
 
-  this.getAllProduct()
-}
-ngOnChanges(changes: SimpleChanges): void {
-
-
-}
-
-getAllProduct(){
-  this.jsonProduct.getAllData().subscribe(suc=>{
-    this.productARR=suc
-  })
-}
-deleteProduct(i:number){
-  this.jsonProduct.deleteData(i).subscribe(suc=>{
+  ngOnInit(): void {
     this.getAllProduct()
-  })
-}
+
+  }
+
+  getAllProduct(){
+    this.jsonProduct.getAllData().subscribe(suc=>{
+      this.productARR=suc
+    })
+  }
+
+  deleteProduct(i:number){
+    this.jsonProduct.deleteData(i).subscribe(suc=>{
+      this.getAllProduct()
+    })
+  }
 
 
 
