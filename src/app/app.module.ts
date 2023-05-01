@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { InterceptorInterceptor } from './config/interceptor.interceptor';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +28,18 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     TooltipModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    ToastrModule.forRoot(),
   ],
   exports:[
     MenubarComponent
   ],
   providers: [
-
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:InterceptorInterceptor,
+      multi:true
+    }
   ],
   bootstrap: [AppComponent]
 })

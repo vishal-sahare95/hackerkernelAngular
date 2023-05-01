@@ -1,28 +1,6 @@
 {
   "products": [
     {
-      "name": "asd",
-      "products": [
-        {
-          "pname": "asd",
-          "price": " 6",
-          "quantity": " 6"
-        }
-      ],
-      "id": 7
-    },
-    {
-      "name": "dfdf",
-      "products": [
-        {
-          "pname": "hgg",
-          "price": " 9",
-          "quantity": " 08"
-        }
-      ],
-      "id": 9
-    },
-    {
       "name": "dfd",
       "products": [
         {
@@ -160,36 +138,6 @@
   ],
   "product": [
     {
-      "name": "vishal",
-      "price": "dfg3",
-      "quantity": "dfg",
-      "id": 35
-    },
-    {
-      "name": "sad",
-      "price": "44",
-      "quantity": "45",
-      "id": 36
-    },
-    {
-      "name": "XZ",
-      "price": "4",
-      "quantity": "4",
-      "id": 37
-    },
-    {
-      "name": "wqepp",
-      "price": "e",
-      "quantity": "e",
-      "id": 38
-    },
-    {
-      "name": "wqe",
-      "price": "e",
-      "quantity": "e",
-      "id": 39
-    },
-    {
       "name": "dxcf",
       "price": "fg",
       "quantity": "dfg",
@@ -200,6 +148,36 @@
       "price": "5",
       "quantity": "5",
       "id": 41
+    },
+    {
+      "name": "dds",
+      "price": "dsf",
+      "quantity": "dsf",
+      "id": 42
+    },
+    {
+      "name": "rdftgv",
+      "price": "6",
+      "quantity": "6",
+      "id": 43
+    },
+    {
+      "name": "hj",
+      "price": "5",
+      "quantity": "5",
+      "id": 44
+    },
+    {
+      "name": "hj",
+      "price": "5",
+      "quantity": "5",
+      "id": 45
+    },
+    {
+      "name": "bvcn",
+      "price": "vbn",
+      "quantity": "bvn",
+      "id": 46
     }
   ]
 }
