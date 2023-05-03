@@ -9,7 +9,7 @@ import { LoginService } from 'src/app/config/login/login.service';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit{
-    logInValue?:boolean
+    isShowPassword:boolean=false
     errorMSG = {
         email: [
             { type: 'required', message: 'email is required' }
@@ -30,13 +30,7 @@ export class LoginComponent implements OnInit{
     }
 
     ngOnInit(): void {
-        //   this.loginSRV.islogInValue.subscribe(suc=>{
-        //     console.log(suc+'before');
-            
-        //     suc=this.loginSRV.isLogIn()
-        //     console.log(suc);
-            
-        // })
+       
     }
 
     get email() {
@@ -53,12 +47,22 @@ export class LoginComponent implements OnInit{
                 this.loginSRV.islogInValue.next(true)               //this is for hide and show menubar
             
                 this.router.navigateByUrl('reactive-form/view')
-            
-            })
+            },
+            error=>{
+                alert('something wrong')
+                this.form.reset()
+
+            }
+            )
         }
         else {
             this.form.markAllAsTouched();
             this.form.markAsTouched();
         }
+    }
+    togglePAssword(){
+        this.isShowPassword=!this.isShowPassword;
+        
+        
     }
 }

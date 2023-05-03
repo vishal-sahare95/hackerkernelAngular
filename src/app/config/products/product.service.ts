@@ -25,14 +25,5 @@ url="http://localhost:3000/products"
 
   }
 
-  // getAllProducts():Observable<products[]>{
-  //   return this.http.get<products[]>(this.url)
-  //     }
-  //     postProduct(data:productsC):Observable<productsC>{
-  //       return this.http.post<productsC>(this.url,data)
-        
-  //     }
-  //     delete(id:number):Observable<productsC>{
-  //       return this.http.delete<productsC>(`${this.url}/${id}`)
-  //     }
+
 }

@@ -5,3 +5,14 @@
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+
+.eye-abs{
+    position: relative;
+    .eye-icon{
+        position: absolute;
+        top: 8px;
+        right: 24px;
+
+    }
+}

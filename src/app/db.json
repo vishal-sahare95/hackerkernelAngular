@@ -1,50 +1,6 @@
 {
   "products": [
     {
-      "name": "dfd",
-      "products": [
-        {
-          "pname": "fdg6",
-          "price": " 6",
-          "quantity": " 657"
-        }
-      ],
-      "id": 10
-    },
-    {
-      "name": "sd",
-      "products": [
-        {
-          "pname": "dfdf",
-          "price": " E",
-          "quantity": " 9"
-        }
-      ],
-      "id": 11
-    },
-    {
-      "name": "asd",
-      "products": [
-        {
-          "pname": "Zxzc",
-          "price": " 4",
-          "quantity": " 65"
-        }
-      ],
-      "id": 12
-    },
-    {
-      "name": "dfdf",
-      "products": [
-        {
-          "pname": "dfg",
-          "price": " 5",
-          "quantity": " 7"
-        }
-      ],
-      "id": 14
-    },
-    {
       "name": "xczx",
       "products": [
         {
@@ -124,6 +80,28 @@
         }
       ],
       "id": 21
+    },
+    {
+      "name": "dgfh",
+      "products": [
+        {
+          "pname": "gdfh",
+          "price": " 5",
+          "quantity": " 5"
+        }
+      ],
+      "id": 22
+    },
+    {
+      "name": "hgj",
+      "products": [
+        {
+          "pname": "gj",
+          "price": " 54",
+          "quantity": " 6"
+        }
+      ],
+      "id": 23
     }
   ],
   "foods": [
@@ -137,12 +115,6 @@
     }
   ],
   "product": [
-    {
-      "name": "dxcf",
-      "price": "fg",
-      "quantity": "dfg",
-      "id": 40
-    },
     {
       "name": "dfgh",
       "price": "5",
@@ -178,6 +150,12 @@
       "price": "vbn",
       "quantity": "bvn",
       "id": 46
+    },
+    {
+      "name": "fg",
+      "price": "4",
+      "quantity": "4",
+      "id": 47
     }
   ]
 }

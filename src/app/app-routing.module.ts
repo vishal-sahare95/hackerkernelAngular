@@ -5,7 +5,8 @@ import { LoginComponent } from './partials/login/login.component';
 import { LoggedInAuthGuardGuard } from './config/logged-in-auth-guard.guard';
 
 const routes: Routes = [ 
- 
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path:'login',
    component:LoginComponent,
