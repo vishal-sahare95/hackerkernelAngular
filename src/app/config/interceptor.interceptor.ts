@@ -13,6 +13,7 @@ export class InterceptorInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    
     const locaToken=localStorage.getItem('token');
     console.log(locaToken);
     request=request.clone({headers:request.headers.set('Authorization','bearer'+locaToken)})

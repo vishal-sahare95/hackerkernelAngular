@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit{
     public form: FormGroup;
     constructor(private fb: FormBuilder, private loginSRV: LoginService, private router: Router) {
         this.form = this.fb.group({
-            email: ['', [Validators.required]],
+            email: ['eve.holt@reqres.in', [Validators.required]],
             password: ['', [Validators.required]],
         })
       
@@ -45,7 +45,6 @@ export class LoginComponent implements OnInit{
             this.loginSRV.post(this.form.value).subscribe(suc => {
                 localStorage.setItem('token', suc.token);
                 this.loginSRV.islogInValue.next(true)               //this is for hide and show menubar
-            
                 this.router.navigateByUrl('reactive-form/view')
             },
             error=>{

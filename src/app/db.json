@@ -1,107 +1,37 @@
 {
   "products": [
     {
-      "name": "xczx",
+      "name": "dfs",
       "products": [
         {
-          "pname": "xz",
-          "price": " 6",
-          "quantity": " 5"
-        }
-      ],
-      "id": 16
-    },
-    {
-      "name": "vbc",
-      "products": [
-        {
-          "pname": "vc5",
+          "pname": "dsf",
           "price": " 5",
           "quantity": " 5"
         }
       ],
-      "id": 17
+      "id": 24
     },
     {
-      "name": "ddxv",
+      "name": "shorcurtss",
       "products": [
         {
-          "pname": "asd",
-          "price": " 5",
-          "quantity": " 65"
-        },
-        {
-          "pname": "6hfg",
-          "price": " 8",
-          "quantity": " 8"
-        },
-        {
-          "pname": "rt",
-          "price": " 7",
-          "quantity": " 7"
-        }
-      ],
-      "id": 18
-    },
-    {
-      "name": "xc",
-      "products": [
-        {
-          "pname": "xz",
-          "price": " 54",
-          "quantity": " 5"
-        }
-      ],
-      "id": 19
-    },
-    {
-      "name": "zxcdxf0000",
-      "products": [
-        {
-          "pname": "cxv",
-          "price": "6",
-          "quantity": " 6"
-        },
-        {
-          "pname": "drg",
-          "price": " 7",
-          "quantity": " 7"
-        }
-      ],
-      "id": 20
-    },
-    {
-      "name": "cxv",
-      "products": [
-        {
-          "pname": "cx",
-          "price": " ",
-          "quantity": " "
-        }
-      ],
-      "id": 21
-    },
-    {
-      "name": "dgfh",
-      "products": [
-        {
-          "pname": "gdfh",
+          "pname": "dfg",
           "price": " 5",
           "quantity": " 5"
         }
       ],
-      "id": 22
+      "id": 25
     },
     {
-      "name": "hgj",
+      "name": "tret",
       "products": [
         {
-          "pname": "gj",
-          "price": " 54",
-          "quantity": " 6"
+          "pname": "ert",
+          "price": " 5",
+          "quantity": " 5"
         }
       ],
-      "id": 23
+      "id": 26
     }
   ],
   "foods": [

@@ -10,8 +10,8 @@ export class AppComponent implements OnInit {
     title = 'angular15';
     logInValue?: boolean;
     constructor(private loginSRV: LoginService) {
-        
-        
+
+
     }
     ngOnInit(): void {
         this.loginSRV.islogInValue.subscribe(suc => {

@@ -6,7 +6,7 @@ import { LoggedInAuthGuardGuard } from './config/logged-in-auth-guard.guard';
 
 const routes: Routes = [ 
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'reactive-form', pathMatch: 'full' },
   {
     path:'login',
    component:LoginComponent,
@@ -38,7 +38,8 @@ const routes: Routes = [
 
 {
   path:'second-path',
-  loadChildren:()=>import('./pages/secondPart/first-dat/first-dat.module').then(m=>m.FirstDatModule)
+  loadChildren:()=>import('./pages/secondPart/first-dat/first-dat.module').then(m=>m.FirstDatModule),
+  canActivate:[AuthGuard]
 },
 {
   path:'second-part-dashboard',

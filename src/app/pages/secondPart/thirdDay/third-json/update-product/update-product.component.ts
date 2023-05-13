@@ -23,10 +23,8 @@ export class UpdateProductComponent implements OnInit {
   })
   }
   ngOnInit(): void {
-
       this.getProduct()
       console.log(this.form.value);
-
   }
 
   getProduct(){

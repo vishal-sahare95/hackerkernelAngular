@@ -23,7 +23,6 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Day1normalModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -35,11 +34,11 @@ import { ToastrModule } from 'ngx-toastr';
     MenubarComponent
   ],
   providers: [
-    {
-      provide:HTTP_INTERCEPTORS,
-      useClass:InterceptorInterceptor,
-      multi:true
-    }
+    // {
+    //   provide:HTTP_INTERCEPTORS,
+    //   useClass:InterceptorInterceptor,
+    //   multi:true
+    // }
   ],
   bootstrap: [AppComponent]
 })

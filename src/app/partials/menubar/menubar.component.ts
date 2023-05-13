@@ -9,14 +9,17 @@ import { LoginService } from 'src/app/config/login/login.service';
 })
 export class MenubarComponent {
     logInValue?: boolean
-    
+
     constructor(private router: Router, private loginSRV: LoginService) {
 
     }
     ngOnInit(): void {
+        console.log(this.logInValue);
 
         this.loginSRV.islogInValue.subscribe(suc => {
             this.logInValue = suc
+            console.log(this.logInValue);
+
         })
     }
 
